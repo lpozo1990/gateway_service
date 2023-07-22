@@ -1,9 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors'); 
 
 const app = express();
 const PORT = 3000; 
 
+
+app.use(cors()); 
 app.use(bodyParser.json());
 
 // In-memory database to store gateways and devices

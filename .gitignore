@@ -1,0 +1,26 @@
+# Node.js / npm
+node_modules/
+npm-debug.log
+*.log
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Dependency lock files
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+
+# Compiled output
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

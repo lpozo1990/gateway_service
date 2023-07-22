@@ -12,31 +12,23 @@ This is a REST service for storing information about gateways and their associat
 
 git clone https://github.com/lpozo1990/gateway_service.git
 
-css
-Copy code
+
 
 2. Navigate to the project directory:
 
 cd gateway-service
 
-arduino
-Copy code
+
 
 3. Install dependencies using npm:
 
 npm install
-
-csharp
-Copy code
 
 ## Usage
 
 1. Start the server using Nodemon:
 
 npm start
-
-markdown
-Copy code
 
 The server will run on http://localhost:3000.
 

@@ -15,11 +15,30 @@ const gatewayDatabase = {
 };
 
 function isValidIP(ip) {
-  return true; // Placeholder validation for simplicity
+  // Regular expression pattern for IPv4 address validation
+  const ipv4Pattern = /^(\d{1,3}\.){3}\d{1,3}$/;
+
+  // Check if the IP address matches the pattern
+  if (ipv4Pattern.test(ip)) {
+    // Split the IP address into its parts (octets)
+    const octets = ip.split('.');
+
+    // Check each octet for valid range (0-255)
+    for (const octet of octets) {
+      const octetValue = parseInt(octet, 10);
+      if (isNaN(octetValue) || octetValue < 0 || octetValue > 255) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  return false;
 }
 
+
 function isValidPeripheralDevice(device) {
-  // You can add more validation logic here if needed
   return typeof device.vendor === 'string' && device.vendor.trim().length > 0;
 }
 

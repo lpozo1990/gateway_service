@@ -1,0 +1,132 @@
+{
+  "info": {
+    "_postman_id": "2ea303c7-0c4c-44b5-9f28-8b4e362c6ad0",
+    "name": "Gateway Service API",
+    "description": "Collection for Gateway Service API endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Gateways",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:3000/gateways",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "gateways"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST New Gateway",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"serialNumber\": \"ABC123\",\n  \"name\": \"Gateway 1\",\n  \"ipv4\": \"192.168.1.10\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/gateways",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "gateways"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Gateway by Serial Number",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:3000/gateways/ABC123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "gateways",
+            "ABC123"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT Add Device to Gateway",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"uid\": 1,\n  \"vendor\": \"Device Vendor 1\",\n  \"dateCreated\": \"2023-07-22\",\n  \"status\": \"online\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/gateways/ABC123/add-device",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "gateways",
+            "ABC123",
+            "add-device"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE Remove Device from Gateway",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:3000/gateways/ABC123/remove-device/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "gateways",
+            "ABC123",
+            "remove-device",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

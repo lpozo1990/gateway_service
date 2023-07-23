@@ -100,7 +100,7 @@ app.delete('/gateways/:serialNumber/remove-device/:uid', (req, res) => {
     return res.status(404).json({ error: 'No devices associated with the gateway' });
   }
 
-  const deviceIndex = gateway.devices.findIndex((device) => device.uid === parseInt(uid, 10));
+  const deviceIndex = gateway.devices.findIndex((device) => device.uid === uid);
   if (deviceIndex === -1) {
     return res.status(404).json({ error: 'Device not found' });
   }

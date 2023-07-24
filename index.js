@@ -1,8 +1,8 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors'); 
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 
-const app = express();
+export const app = express();
 const PORT = 3000; 
 
 
@@ -14,7 +14,7 @@ const gatewayDatabase = {
   gateways: [],
 };
 
-function isValidIP(ip) {
+export function isValidIP(ip) {
   // Regular expression pattern for IPv4 address validation
   const ipv4Pattern = /^(\d{1,3}\.){3}\d{1,3}$/;
 

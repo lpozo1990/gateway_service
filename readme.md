@@ -28,11 +28,21 @@ npm install
 
 1. Start the server using Nodemon:
 
-npm start
+`npm start`
 
 The server will run on http://localhost:3000.
 
 2. Interact with the API using tools like Postman (https://www.postman.com/downloads/) or your preferred HTTP client.
+
+## Running Tests
+The Gateway Service API project comes with test cases to verify its functionality. To run the tests, use the following command:
+
+
+`npm test`
+
+This command will execute the test suite and display the test results in the terminal.
+
+Please note that the tests are designed to ensure the correct behavior of the API endpoints and to handle various scenarios, such as creating gateways, adding devices, removing devices, and error handling.
 
 ## Endpoints
 
